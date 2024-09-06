@@ -1,5 +1,4 @@
 package com.example.bean;
-
 import java.util.Objects;
 
 public class Student {
