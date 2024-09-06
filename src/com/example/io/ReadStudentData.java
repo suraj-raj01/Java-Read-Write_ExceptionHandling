@@ -1,7 +1,5 @@
 package com.example.io;
-
 import com.example.bean.Student;
-
 import java.io.*;
 
 public class ReadStudentData {
@@ -13,18 +11,18 @@ public class ReadStudentData {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String line = bufferedReader.readLine();
         int count = 0;
-        while(line!=null){
+        while (line != null) {
             line = bufferedReader.readLine();
             count++;
         }
-        studentData = new Student[count];
+        studentData = new Student[count - 1];
         // read data from file, and objects of student to array
         bufferedReader = new BufferedReader(new FileReader(file));
         line = bufferedReader.readLine();
         int indexOfStudentData = 0;
-        while(line!=null){
+        while (line != null) {
             line = bufferedReader.readLine();
-            if(line!=null){
+            if (line != null) {
                 String[] split = line.split(",");
                 Student student = new Student();
                 student.setName(split[0]);
